@@ -1,5 +1,9 @@
 require "batch_scaffold/version"
 
 module BatchScaffold
-  # Your code goes here...
+  class Railtie < ::Rails::Railtie
+    rake_tasks do
+      load "tasks/scaffold.rake"
+    end
+  end
 end
