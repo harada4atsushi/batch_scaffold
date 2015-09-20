@@ -22,7 +22,42 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+put config/batch_scaffold.yml
+
+sample
+
+```
+routes:
+  portfolios:
+    portfolio_details:
+  contacts:
+
+resources:
+  portfolios:
+    user: references
+    name:
+      type: string
+      null: false
+      limit: 50
+    url:
+      type: string
+      limit: 300
+  portfolio_details:
+    portfolio: references
+    status:
+      type: integer
+      null: false
+  contacts:
+    user: references
+    subjet:
+      type: string
+      null: false
+      limit: 80
+    detail:
+      type: string
+      null: false
+      limit: 600
+```
 
 ## Development
 
@@ -33,4 +68,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/batch_scaffold.
-
